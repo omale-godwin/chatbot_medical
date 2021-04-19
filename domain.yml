@@ -1,0 +1,48 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- mood_great
+- mood_unhappy
+- bot_challenge
+- who_are_you
+- my_name
+- mobile_number
+- affirm
+- deny
+entities:
+- name
+- phone
+slots:
+  name:
+    type: text
+    influence_conversation: true
+  phone:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_ask_name:
+  - text: what is you name
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: thank you fo providing your detail!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_name:
+  - text: my name is godwin omale a python programmer and a deveop enginneer
+  utter_your_name:
+  - text: what is your name
+  utter_phone_number:
+  - text: what is your phone number
+  utter_thanks:
+  - text: thank you fo providing your detail
